@@ -3,11 +3,11 @@ package com.mem.model;
 
 import java.sql.Date;
 
-import oracle.sql.BLOB;
 
 
 
-public class UserVO implements java.io.Serializable{
+
+public class MemVO implements java.io.Serializable{
 	/**
 	 * 
 	 */
@@ -21,8 +21,9 @@ public class UserVO implements java.io.Serializable{
 	private Integer member_sex ;
 	private Date    member_birthday ; 
 	private String  member_address;
+	private String  member_telephone;
 	private String  member_email ;
-	private BLOB  	member_picture ;
+	private byte[]  member_picture ;
 	private String  member_credit_number;
 	private Integer member_back_verification;
 	private Date 	member_buildday;
@@ -78,16 +79,22 @@ public class UserVO implements java.io.Serializable{
 	public void setMember_address(String member_address) {
 		this.member_address = member_address;
 	}
+	public String getMember_telephone() {
+		return member_telephone;
+	}
+	public void setMember_telephone(String member_telephone) {
+		this.member_telephone = member_telephone;
+	}
 	public String getMember_email() {
 		return member_email;
 	}
 	public void setMember_email(String member_email) {
 		this.member_email = member_email;
 	}
-	public BLOB getMember_picture() {
+	public byte[] getMember_picture() {
 		return member_picture;
 	}
-	public void setMember_picture(BLOB member_picture) {
+	public void setMember_picture(byte[] member_picture) {
 		this.member_picture = member_picture;
 	}
 	public String getMember_credit_number() {
@@ -120,6 +127,7 @@ public class UserVO implements java.io.Serializable{
 	public void setMember_status(String member_status) {
 		this.member_status = member_status;
 	}
+	
 	
 	
 	
